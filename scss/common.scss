@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 header{
     width: 100%;
     .hdtop{
@@ -62,7 +64,7 @@ header{
                 background-color: #222;
                 color: #fff;
                 padding: 10px;
-                width: 180px;
+                min-width: 180px;
                 img{
                     width: 22px;
                     height: 30px;
