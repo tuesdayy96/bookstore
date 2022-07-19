@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import "layout.scss";
+
 header{
     width: 100%;
     .hdtop{
@@ -23,8 +25,7 @@ header{
         }
     }
     .hdmain{
-        width: 75%;
-        margin: 0 auto;
+        @include layout();
         margin-top: 70px;
         .main_front{
             display: flex;

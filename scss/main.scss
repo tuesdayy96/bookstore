@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
+@import "layout.scss";
+
 @mixin todaybook {
     ul{
-        width: 75%;
-        margin: 0 auto;
+        @include layout();
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -17,7 +18,7 @@
                 height: 100%;
                 display: block;
                 border-radius: 20px;
-                @include bgcolor();
+                background: linear-gradient(to bottom, #f9f5ff,transparent);
                 *{
                     margin: 10px 0;
                 }
@@ -41,11 +42,11 @@
     .sec_main{
         width: 100%;
         height: 400px;
-        background-color: #4c4c4c;
+        background: linear-gradient(to top,rgba(230,230,230,0.1)50%,#e4e4f4);
         position: relative;
+        
         .main_tap{
-            width: 75%;
-            margin: 0 auto;
+            @include layout();
             .tap_menu{
                 width: 180px;
                 height: 100%;
@@ -96,7 +97,8 @@
                             height: 300px;
                             margin-right: 40px;
                             float: left;
-                            background-color: #f5f5df;
+                            border-radius: 10px;
+                            background: linear-gradient(to bottom, #f9f5ff,#fff);
                             position: absolute;
                             left: 0;
                             cursor: pointer;
@@ -135,8 +137,7 @@
         width: 100%;
         background: linear-gradient(to bottom, #e4e4f4,#fff);
         .todayMD{
-            width: 75%;
-            margin: 0 auto;
+            @include layout();
             padding: 30px 0;
             h3{
                 font-size: 25px;
@@ -147,6 +148,77 @@
         .todayBook{
             @include todaybook;
             text-align: center;
+        }
+    }
+    .best{
+        width: 100%;
+        .best_container{
+            @include layout(30px);
+            .best_hd{
+                font-size: 25px;
+            }
+            .best_cg{
+                margin: 30px 0 15px 0;
+                ul{
+                    @include flex();
+                    li{
+                        padding: 5px 10px;
+                        border:1px solid #111;
+                        border-radius: 20px;
+                        margin: 5px;
+                        width: 150px;
+                        text-align: center;
+                        transition: all 0.5s;
+                        &.on{
+                            color: #fff;
+                            background-color: #e4e4f4;
+                            border-color: #e4e4f4;
+                        }
+                    }
+                }
+            }
+            .best_box{
+                border-top: 1px solid rgb(100,100,100);
+                border-bottom: 1px solid rgb(100,100,100);
+                width: 100%;
+                height: 700px;
+                display: flex;
+                .txt_item{
+                    width: 25%;
+                    height: 100%;
+                    overflow: auto;
+                    &::-webkit-scrollbar{
+                        width: 3px;
+                    }
+                    &::-webkit-scrollbar-thumb{
+                        background-color: #111;
+                    }
+                    &::-webkit-scrollbar-track{
+                        background-color: rgba(100,100,100,0.5);
+                    }
+                    ul{
+                        width: 100%;
+                        &:not(:first-of-type){
+                            display: none;
+                        }
+                        a{
+                            display: block;
+                            border-bottom: 1px solid rgba(100,100,100,0.5);
+                            padding: 15px 5px;
+                            font-size: 14px;
+                            color: #808080;
+                            transition: all 0.5s;
+                            &.on{
+                                border-bottom: 3px solid rgb(0,50,150);
+                            }
+                        }
+                    }
+                }
+                .img_item{
+                    width: 75%;
+                    height: 100%
+                }
+            }
         }
     }
 }

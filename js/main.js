@@ -29,6 +29,7 @@ function tap_slide(){
     next1.addEventListener('click',slideNext);
     prev1.addEventListener('click',slidePrev);
 }
+
 tap_slide();
 
 // 롤링 배너
@@ -52,7 +53,7 @@ $(function(){
             });
             var first_content = $('.content' + first);
             var last_content = $('.content' + last);
-            if(first_content.position().left <'-'+($(first_content).width())){
+            if(first_content.position().left < '-'+($(first_content).width())){
                 first_content.css('left', last_content.position().left+ last_content.width()+40);
                 first++;
                 last++;
@@ -71,6 +72,7 @@ $(function(){
 
 
 // 마우스오버 & 클릭
+
 $('.tap_menu li').on('mouseover',function(){
     var v_port = $('<div>').addClass('viewport');
     var idx = $(this).index();
@@ -90,3 +92,34 @@ $('.tap_menu li').on('mouseover',function(){
     });
     last = imgCnt;
 })
+
+cate.onclick = function(e){
+    var cg_li = document.querySelectorAll('.cg_list li');
+    var items = document.querySelectorAll('.it');
+    var idx;
+    for(var i = 0; i < cg_li.length; i++){
+        cg_li[i].classList.remove('on');
+        e.target.classList.add('on');
+        cg_li[i].setAttribute('data-index',i);
+        items[i].setAttribute('data-index',i);
+        idx = items[i].getAttribute('data-index');
+        if(e.target.getAttribute('data-index') == idx){
+            items[i].style.display = 'block';
+        } else if(e.target.id == 'cate'){
+            items[i].style.display = 'block';
+        } else {
+            items[i].style.display = 'none';
+        }
+    }
+}
+
+const txt_it = document.querySelector('.txt_item');
+var item_li = txt_it.getElementsByTagName('ul');
+for(var i=0;i<item_li.length;i++){
+    item_li[i].setAttribute('id','id'+i);
+    const ids = document.getElementById('id'+i);
+    ids.onclick = function(e){
+        $('.it li a').removeClass('on');
+        e.target.classList.add('on');
+    }
+}

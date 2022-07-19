@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+@mixin layout($margin:0) {
+    width: 80%;
+    margin: $margin auto;
+}
+
+@mixin flex($con:center) {
+    display: flex;
+    justify-content: $con;
+    align-items: center;
+}
