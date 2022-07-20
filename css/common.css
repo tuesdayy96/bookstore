@@ -99,6 +99,9 @@ header .hdmain .main_back .guideline .guide ul li a img {
 header .hdmain .main_back .guideline .guide ul li a span {
   display: block;
 }
+header .hdmain .main_back .guideline .guide ul li a span.on {
+  font-weight: bold;
+}
 header .hdmain .main_back .guide_btn {
   padding-top: 10px;
   display: flex;

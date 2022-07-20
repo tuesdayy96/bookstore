@@ -1,11 +1,34 @@
+@charset "UTF-8";
 .section {
   width: 100%;
+  /* 메인슬라이드 */
+  /* 오늘의 책 */
+  /* 공부서점 차트 */
+  /* 눈돌리기 */
 }
 .section .sec_main {
   width: 100%;
   height: 400px;
   background: linear-gradient(to top, rgba(230, 230, 230, 0.1) 50%, #e4e4f4);
   position: relative;
+}
+.section .sec_main .event_tap {
+  width: 100%;
+  height: 100%;
+}
+.section .sec_main .event_tap .event_li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  z-index: -1;
+}
+.section .sec_main .event_tap .event_li.on {
+  display: flex;
+  z-index: 100;
 }
 .section .sec_main .main_tap {
   width: 80%;
@@ -15,7 +38,8 @@
   width: 180px;
   height: 100%;
   color: #fff;
-  position: relative;
+  position: absolute;
+  top: 0;
   z-index: 1000;
 }
 .section .sec_main .main_tap .tap_menu li {
@@ -179,7 +203,7 @@
   border-top: 1px solid rgb(100, 100, 100);
   border-bottom: 1px solid rgb(100, 100, 100);
   width: 100%;
-  height: 700px;
+  height: 730px;
   display: flex;
 }
 .section .best .best_container .best_box .txt_item {
@@ -216,4 +240,112 @@
 .section .best .best_container .best_box .img_item {
   width: 75%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  overflow: hidden;
+}
+.section .best .best_container .best_box .img_item .img_li {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+}
+.section .best .best_container .best_box .img_item .img_li li {
+  width: 140px;
+  height: 310px;
+  margin-left: 15px;
+  position: relative;
+}
+.section .best .best_container .best_box .img_item .img_li li .img_desc {
+  margin: 10px 0;
+}
+.section .best .best_container .best_box .img_item .img_li li .img_desc * {
+  margin: 5px 0;
+}
+.section .best .best_container .best_box .img_item .img_li li .img_idx {
+  position: absolute;
+  top: -15px;
+  left: -1px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background-color: rgb(50, 50, 50);
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+}
+.section .best .best_container .best_box .img_item .img_li li .img_thumb {
+  border: 1px solid #ddd;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  padding-top: 10px;
+}
+.section .best .best_container .best_box .img_item .img_li li .img_title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 15px;
+}
+.section .best .best_container .best_box .img_item .img_li li .img_au, .section .best .best_container .best_box .img_item .img_li li .img_pub {
+  font-size: 13px;
+}
+.section .recom {
+  width: 80%;
+  margin: 50px auto;
+}
+.section .recom .recom_hd {
+  border-bottom: 1px solid rgba(100, 100, 100, 0.5);
+}
+.section .recom .recom_hd h3 {
+  font-size: 25px;
+}
+.section .recom .recom_hd p {
+  color: #808080;
+  margin: 5px 0 20px;
+}
+.section .recom .recom_content ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin: 20px 0 40px 0;
+  padding: 10px 0;
+}
+.section .recom .recom_content ul li {
+  width: auto;
+  height: 100%;
+  text-align: center;
+}
+.section .recom .recom_content ul li .recom_thumb {
+  width: 100%;
+  height: 150px;
+}
+.section .recom .recom_content ul li .recom_thumb img {
+  border: 1px solid rgb(100, 100, 100);
+  padding: 5px;
+}
+.section .recom .recom_content ul li .recom_desc {
+  text-align: left;
+}
+.section .recom .recom_content ul li .recom_desc * {
+  margin: 5px 0;
+}
+.section .recom .recom_content ul li .recom_desc .recom_genre {
+  font-size: 12px;
+}
+.section .recom .recom_content ul li .recom_desc .recom_title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 15px;
+}
+.section .recom .recom_content ul li .recom_desc .recom_au {
+  color: rgb(100, 100, 100);
+  font-size: 12px;
 }

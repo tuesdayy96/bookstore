@@ -96,6 +96,9 @@ header{
                                 }
                                 span{
                                     display: block;
+                                    &.on{
+                                        font-weight: bold;
+                                    }
                                 }
                             }
                             
