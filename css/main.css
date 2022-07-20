@@ -310,27 +310,26 @@
 }
 .section .recom .recom_content ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 100%;
   margin: 20px 0 40px 0;
   padding: 10px 0;
 }
 .section .recom .recom_content ul li {
-  width: auto;
-  height: 100%;
+  width: 100%;
+  margin: 10px;
   text-align: center;
 }
-.section .recom .recom_content ul li .recom_thumb {
-  width: 100%;
-  height: 150px;
-}
 .section .recom .recom_content ul li .recom_thumb img {
+  width: 100%;
+  height: 100%;
   border: 1px solid rgb(100, 100, 100);
   padding: 5px;
 }
 .section .recom .recom_content ul li .recom_desc {
   text-align: left;
+  height: 60px;
 }
 .section .recom .recom_content ul li .recom_desc * {
   margin: 5px 0;
@@ -347,5 +346,113 @@
 }
 .section .recom .recom_content ul li .recom_desc .recom_au {
   color: rgb(100, 100, 100);
+  font-size: 12px;
+}
+.section .recom .recom_offer {
+  width: 100%;
+}
+.section .recom .recom_offer img {
+  width: 100%;
+}
+.section .latest {
+  width: 80%;
+  margin: 50px auto;
+}
+.section .latest .latest_hd {
+  border-bottom: 1px solid rgba(100, 100, 100, 0.5);
+}
+.section .latest .latest_hd h3 {
+  font-size: 25px;
+}
+.section .latest .latest_hd p {
+  color: #808080;
+  margin: 5px 0 20px;
+}
+.section .latest .latest_content ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 20px 0 40px 0;
+  padding: 10px 0;
+}
+.section .latest .latest_content ul li {
+  width: 100%;
+  margin: 10px;
+  text-align: center;
+}
+.section .latest .latest_content ul li .latest_thumb img {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgb(100, 100, 100);
+  padding: 5px;
+}
+.section .latest .latest_content ul li .latest_desc {
+  text-align: left;
+  height: 60px;
+}
+.section .latest .latest_content ul li .latest_desc * {
+  margin: 5px 0;
+}
+.section .latest .latest_content ul li .latest_desc .latest_genre {
+  font-size: 12px;
+}
+.section .latest .latest_content ul li .latest_desc .latest_title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 15px;
+}
+.section .latest .latest_content ul li .latest_desc .latest_au {
+  color: rgb(100, 100, 100);
+  font-size: 12px;
+}
+.section .latest .latest_offer {
+  width: 100%;
+}
+.section .latest .latest_offer img {
+  width: 100%;
+}
+.section .writer {
+  width: 100%;
+}
+.section .writer .writer_hd {
+  width: 80%;
+  margin: 30px auto;
+}
+.section .writer .writer_hd h3 {
+  font-size: 25px;
+}
+.section .writer .writer_hd p {
+  color: #808080;
+  margin: 5px 0 20px;
+}
+.section .writer .writer_slide {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section .writer .writer_slide .wrt {
+  width: 100%;
+  height: auto;
+}
+.section .writer .writer_slide .wrt a {
+  display: block;
+  border-radius: 60px;
+  overflow: hidden;
+  margin: 15px;
+}
+.section .writer .writer_slide .wrt span {
+  display: block;
+  text-align: center;
+}
+.section .writer .writer_slide .wrt span:first-child {
+  font-weight: bold;
+}
+.section .writer .writer_slide .wrt span:last-child {
   font-size: 12px;
 }

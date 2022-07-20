@@ -289,39 +289,35 @@
             }
         }
     }
+
     /* 눈돌리기 */
     .recom{
         @include layout(50px);
         .recom_hd{
             border-bottom: 1px solid rgba(100,100,100,0.5);
-            h3{
-                font-size: 25px;
-            }
-            p{
-                color: #808080;
-                margin: 5px 0 20px;
-            }
+            @include hd_shot;
         }
         .recom_content{
             ul{
-                @include flex(space-between);
+                @include flex;
                 height:100%;
                 margin: 20px 0 40px 0;
                 padding: 10px 0;
                 li{
-                    width: auto;
-                    height: 100%;
+                    width: 100%;
+                    margin: 10px;
                     text-align: center;
                     .recom_thumb{
-                        width: 100%;
-                        height: 150px;
                         img{
+                            width: 100%;
+                            height: 100%;
                             border: 1px solid rgb(100,100,100);
                             padding: 5px;
                         }
                     }
                     .recom_desc{
                         text-align: left;
+                        height: 60px;
                         *{
                             margin: 5px 0;  
                         }
@@ -340,6 +336,97 @@
                 }
             }
         }
+        .recom_offer{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
     }
-
+    .latest{
+        @include layout(50px);
+        .latest_hd{
+            border-bottom: 1px solid rgba(100,100,100,0.5);
+            @include hd_shot;
+        }
+        .latest_content{
+            ul{
+                @include flex;
+                height:100%;
+                margin: 20px 0 40px 0;
+                padding: 10px 0;
+                li{
+                    width: 100%;
+                    margin: 10px;
+                    text-align: center;
+                    .latest_thumb{
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            border: 1px solid rgb(100,100,100);
+                            padding: 5px;
+                        }
+                    }
+                    .latest_desc{
+                        text-align: left;
+                        height: 60px;
+                        *{
+                            margin: 5px 0;  
+                        }
+                        .latest_genre{
+                            font-size: 12px;
+                        }
+                        .latest_title{
+                            @include overfont(15px);
+                        }
+                        .latest_au{
+                            color:rgb(100,100,100);
+                            font-size: 12px
+                        }
+                    }
+                    
+                }
+            }
+        }
+        .latest_offer{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .writer{
+        width: 100%;
+        .writer_hd{
+            @include layout(30px);
+            @include hd_shot;
+        }
+        .writer_slide{
+            width:100%;
+            height: 200px;
+            overflow: hidden;
+            @include flex;
+            .wrt{
+                width: 100%;
+                height: auto;
+                a{
+                    display: block;
+                    border-radius: 60px;
+                    overflow: hidden;
+                    margin: 15px;
+                }
+                span{
+                    display: block;
+                    text-align: center;
+                    &:first-child{
+                        font-weight: bold;
+                    }
+                    &:last-child{
+                        font-size: 12px;
+                    }
+                }
+            }
+            
+        }
+    }
 }

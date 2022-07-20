@@ -35,40 +35,26 @@ tap_slide();
 // 롤링 배너
 $(function(){
     var banner_left = 0;
-    var imgCnt = 0;
-    var first = 1;
-    var last;
     var interval;
     $('.test li').each(function(){
         $(this).css('left',banner_left);
         banner_left += $(this).width()+parseInt($(this).css("margin-right"));
-        $(this).attr('class','content'+(++imgCnt));
     });
-    last = imgCnt;
     rollingStart();
     function rollingStart(){
         interval = setInterval(function(){
             $('.viewport li').each(function(){
                 $(this).css('left',$(this).position().left-1);
             });
-            var first_content = $('.content' + first);
-            var last_content = $('.content' + last);
-            if(first_content.position().left < '-'+($(first_content).width())){
-                first_content.css('left', last_content.position().left+ last_content.width()+40);
-                first++;
-                last++;
-                if(last>imgCnt){
-                    last = 1;
+            for(var i=0; i < $('.viewport li').length;i++){
+                if($('.viewport li').eq(i).position().left < -+($('.viewport li').eq(i).width())){
+                    $('.viewport li').eq(i).css('left', $('.viewport li').eq(i-1).position().left+($('.viewport li:last').width()+40));
                 }
-                if(first>imgCnt){
-                    first = 1;
-                }
-            }
+            }    
         },20);
     }
 });
    
-
 
 
 // 마우스오버 & 클릭
@@ -90,14 +76,13 @@ $('.tap_menu li').on('mouseover',function(){
     $('.visual_view').unwrap(".viewport").css('visibility','hidden');
     $('.visual_view').eq(idx).wrap(v_port).css('visibility','visible');
     var banner_left = 0;
-    var imgCnt = 0;
     $('.viewport li').each(function(){
         $(this).css('left',banner_left);
         banner_left += $(this).width()+parseInt($(this).css("margin-right"));
-        $(this).attr('class','content'+(++imgCnt));
     });
 })
 
+    // 차트에 인덱스 부여
 cate.onclick = function(e){
     var cg_li = document.querySelectorAll('.cg_list li');
     var items = document.querySelectorAll('.it');
@@ -129,4 +114,17 @@ for(var i=0;i<item_li.length;i++){
         $('.it li a').removeClass('on');
         e.target.classList.add('on');
     }
+}
+
+// 작가 슬라이드
+var writers = {
+    name:['정재승','백희나','김미경','유발하라리','이선재','김중규','민준호','이동기','문동균','고혜원','신영식','말콤글래드웰','정세랑','김연수'],
+    book:['열두 발자국','알사탕','김미경의 리부트','사피엔스','국어','행정학','사회','영어','한국사','국어','한국사','타인의 해석','시선으로 부터','일곱 해의 마지막'],
+    res : function(a){
+        return '<span><strong>'+this.name[a]+'</strong></span>'+'<span>'+this.book[a]+'</span>';
+    }
+}
+for(let i = 0 ; i < $('.wrt').length;i++){
+    $('.wrt').eq(i).find('a').append("<img src='"+'img/writer'+i+'.png'+"'>");
+    $('.wrt').eq(i).append(writers.res(i));
 }

@@ -108,58 +108,86 @@ $.ajax({
 })
 
 // 오늘의 책
-$.ajax({
-    method: "GET",
-    url : "https://dapi.kakao.com/v3/search/book?target-title",
-    data : {query: "공시",page:"2"},
-    headers : {Authorization :"KakaoAK 0abe6ac39569f3f00d940ada52fddad3"},
-})
-.done(function(data){
-    for(var i in data.documents){
-        $('.todayBook .au').eq(i).html("<small>"+data.documents[i].authors[0]+'/'+data.documents[i].publisher+"</small>");
-        $('.todayBook .title').eq(i).text(data.documents[i].title);
-        $('.todayBook .thumb').eq(i).html("<img src='"+data.documents[i].thumbnail+"'>");
-        var str = data.documents[i].contents;
-        var str2 = str.substring(0,40);
-        $('.todayBook .con').eq(i).html(str2);
-    }
-    
-})
-
-// 여기부터 차트.
-
-$.ajax({
-    method: "GET",
-    url : "https://dapi.kakao.com/v3/search/book?target=title",
-    data : {query: "행시"},
-    headers : {Authorization :"KakaoAK 0abe6ac39569f3f00d940ada52fddad3"},
-})
-.done(function(data){
-    for(var i in data.documents){
-        $('.img_idx').eq(i).text(i);
-        $('.img_au').eq(i).html(data.documents[i].authors[0]+" <small>지음<small>");
-        $('.img_title').eq(i).text(data.documents[i].title);
-        $('.img_thumb').eq(i).html("<img src='"+data.documents[i].thumbnail+"'>");
-        $('.img_pub').eq(i).html(data.documents[i].publisher+" <small>지음<small>");
-    }
-})
-
-// 숨돌리기
-const recom_arr = ['드라마','생활','소설','컴퓨터','경제','인문','과학'];
-for(var i = 0;i < recom_arr.length;i++){
-    $.ajax({
-        method: "GET",
-        url : "https://dapi.kakao.com/v3/search/book?target=title",
-        data : {query: recom_arr[i]},
-        headers : {Authorization :"KakaoAK 0abe6ac39569f3f00d940ada52fddad3"},
-    })
-    .done(function(data){
-        console.log(data);
+$(function(){
+    const today_arr = ['선재국어 세트','2023 이동기 영어 기본서','2023 문동균 한국사','2023 써니 행정법총론'];
+    for(var i in today_arr){
+        $.ajax({
+            method: "GET",
+            url : "https://dapi.kakao.com/v3/search/book",
+            data : {query: today_arr[i]},
+            async : false,
+            headers : {Authorization :"KakaoAK 0abe6ac39569f3f00d940ada52fddad3"},
+        })
+        .done(function(data){
             for(var j in data.documents){
-                $('.recom_au').eq(0).html(data.documents[j].authors[0]+' | '+data.documents[j].publisher);
-                $('.recom_title').eq(0).text(data.documents[j].title);
-                $('.recom_thumb').eq(0).html("<img src='"+data.documents[j].thumbnail+"'>");
+                $('.todayBook .au').eq(i).html("<small>"+data.documents[0].authors[0]+'/'+data.documents[j].publisher+"</small>");
+                $('.todayBook .title').eq(i).text(data.documents[0].title);
+                $('.todayBook .thumb').eq(i).html("<img src='"+data.documents[0].thumbnail+"'>");
+                var str = data.documents[0].contents;
+                var str2 = str.substring(0,40);
+                $('.todayBook .con').eq(i).html(str2);
             }
             
         })
-}
+    }
+})
+
+
+// 여기부터 차트.
+$(function(){
+    $.ajax({
+        method: "GET",
+        url : "https://dapi.kakao.com/v3/search/book?target=title",
+        data : {query: "행시"},
+        headers : {Authorization :"KakaoAK 0abe6ac39569f3f00d940ada52fddad3"},
+    })
+    .done(function(data){
+        for(var i in data.documents){
+            $('.img_idx').eq(i).text(i);
+            $('.img_au').eq(i).html(data.documents[i].authors[0]+" <small>지음<small>");
+            $('.img_title').eq(i).text(data.documents[i].title);
+            $('.img_thumb').eq(i).html("<img src='"+data.documents[i].thumbnail+"'>");
+            $('.img_pub').eq(i).html(data.documents[i].publisher+" <small>지음<small>");
+        }
+    })
+
+})
+
+// 숨돌리기
+
+$(function(){
+    const recom_arr = ['드라마','생활','소설','컴퓨터','경제','인문','과학'];
+    for(var i=0;i<recom_arr.length;i++){
+        $.ajax({
+            method: "GET",
+            url : "https://dapi.kakao.com/v3/search/book",
+            data : {query: recom_arr[i]},
+            async : false,
+            headers : {Authorization :"KakaoAK 0abe6ac39569f3f00d940ada52fddad3"},
+        })
+        .done(function(data){
+            for(j in data.documents){
+                    $('.recom_au').eq(i).html(data.documents[j].authors[0]+' | '+data.documents[j].publisher);
+                    $('.recom_title').eq(i).text(data.documents[j].title);
+                    $('.recom_thumb').eq(i).html("<img src='"+data.documents[j].thumbnail+"'>");
+            }
+        })
+    }
+
+    $.ajax({
+        method: "GET",
+        url : "https://dapi.kakao.com/v3/search/book?target=title",
+        data : {query: '2023',sort:'latest',page:"30"},
+        async : false,
+        headers : {Authorization :"KakaoAK 0abe6ac39569f3f00d940ada52fddad3"},
+    })
+    .done(function(data){
+        for(j in data.documents){
+                $('.latest_au').eq(j).html(data.documents[j].authors[0]+' | '+data.documents[j].publisher);
+                $('.latest_title').eq(j).text(data.documents[j].title);
+                $('.latest_thumb').eq(j).html("<img src='"+data.documents[j].thumbnail+"'>");
+        }
+    })
+})
+
+
