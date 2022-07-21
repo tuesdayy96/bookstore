@@ -117,14 +117,59 @@ for(var i=0;i<item_li.length;i++){
 }
 
 // 작가 슬라이드
-var writers = {
-    name:['정재승','백희나','김미경','유발하라리','이선재','김중규','민준호','이동기','문동균','고혜원','신영식','말콤글래드웰','정세랑','김연수'],
-    book:['열두 발자국','알사탕','김미경의 리부트','사피엔스','국어','행정학','사회','영어','한국사','국어','한국사','타인의 해석','시선으로 부터','일곱 해의 마지막'],
-    res : function(a){
-        return '<span><strong>'+this.name[a]+'</strong></span>'+'<span>'+this.book[a]+'</span>';
+$(function(){
+    var writers = {
+        name:['정재승','백희나','김미경','유발하라리','이선재','김중규','민준호','이동기','문동균','고혜원','신영식','말콤글래드웰','정세랑','김연수'],
+        book:['열두 발자국','알사탕','김미경의 리부트','사피엔스','국어','행정학','사회','영어','한국사','국어','한국사','타인의 해석','시선으로 부터','일곱 해의 마지막'],
+        res : function(a){
+            return '<span><strong>'+this.name[a]+'</strong></span>'+'<span>'+this.book[a]+'</span>';
+        }
     }
-}
-for(let i = 0 ; i < $('.wrt').length;i++){
-    $('.wrt').eq(i).find('a').append("<img src='"+'img/writer'+i+'.png'+"'>");
-    $('.wrt').eq(i).append(writers.res(i));
-}
+    for(let i = 0 ; i < $('.wrt').length;i++){
+        $('.wrt').eq(i).find('a').append("<img src='"+'img/writer'+i+'.png'+"'>");
+        $('.wrt').eq(i).append(writers.res(i));
+    }
+    var banner_left2 = 0;
+    $('.writer_slide li').each(function(){
+        $(this).css('left',banner_left2);
+        banner_left2 += $(this).width()+parseInt($(this).css("margin-right"));
+    });
+    rollingStart2();
+    function rollingStart2(){
+        interval = setInterval(function(){
+            $('.writer_slide li').each(function(){
+                $(this).css('left',$(this).position().left-1);
+            });
+            for(var i=0; i < $('.writer_slide li').length;i++){
+                if($('.writer_slide li').eq(i).position().left < -+($('.writer_slide li').eq(i).width())){
+                    $('.writer_slide li').eq(i).css('left', $('.writer_slide li').eq(i-1).position().left+($('.writer_slide li:last').width()+15));
+                }
+            }    
+        },20);
+    }
+})
+
+// 배너 이벤트
+$(function(){
+    $('.banner_btn .next').click(function(){
+        slideBanner();
+    })
+    $('.banner_btn .prev').click(function(){
+        $('.banner_content li:last').prependTo('.banner_content');
+        $('.banner_content').css({marginLeft:-100+'%'});
+        $('.banner_content').stop().animate({marginLeft:0})
+    })
+    var set_banner = setInterval(slideBanner,5000);
+    function slideBanner(){
+        $('.banner_content').stop().animate({marginLeft:-100+'%'},function(){
+            $('.banner_content li:first').appendTo('.banner_content');
+            $('.banner_content').css({marginLeft:0});
+        })
+    }
+    $('.banner_btn').on('mouseover',function(){
+        clearInterval(set_banner);
+    });
+    $('.banner_btn').on('mouseleave',function(){
+        set_banner = setInterval(slideBanner,5000);
+    })
+})
