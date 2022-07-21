@@ -143,7 +143,7 @@ $(function(){
     })
     .done(function(data){
         for(var i in data.documents){
-            $('.img_idx').eq(i).text(i);
+            $('.img_idx').eq(i).html(parseInt(i)+1);
             $('.img_au').eq(i).html(data.documents[i].authors[0]+" <small>지음<small>");
             $('.img_title').eq(i).text(data.documents[i].title);
             $('.img_thumb').eq(i).html("<img src='"+data.documents[i].thumbnail+"'>");

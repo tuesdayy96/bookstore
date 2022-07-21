@@ -173,6 +173,7 @@
 .section .best .best_container {
   width: 80%;
   margin: 30px auto;
+  max-width: 1230px;
 }
 .section .best .best_container .best_hd {
   font-size: 25px;
@@ -209,6 +210,8 @@
 .section .best .best_container .best_box .txt_item {
   width: 25%;
   height: 100%;
+  flex-grow: 0;
+  flex-shrink: 0;
   overflow: auto;
 }
 .section .best .best_container .best_box .txt_item::-webkit-scrollbar {
@@ -257,6 +260,7 @@
   height: 310px;
   margin-left: 15px;
   position: relative;
+  flex-shrink: 1;
 }
 .section .best .best_container .best_box .img_item .img_li li .img_desc {
   margin: 10px 0;
@@ -439,6 +443,7 @@
 .section .writer .writer_slide .wrt {
   width: 100%;
   height: auto;
+  margin: 15px;
 }
 .section .writer .writer_slide .wrt a {
   display: block;
@@ -455,4 +460,15 @@
 }
 .section .writer .writer_slide .wrt span:last-child {
   font-size: 12px;
+}
+.section .addon {
+  width: 80%;
+  margin: 30px auto;
+}
+.section .addon .addon_hd h3 {
+  font-size: 25px;
+}
+.section .addon .addon_hd p {
+  color: #808080;
+  margin: 5px 0 20px;
 }

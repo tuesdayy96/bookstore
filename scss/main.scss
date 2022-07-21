@@ -175,6 +175,7 @@
         width: 100%;
         .best_container{
             @include layout(30px);
+            max-width: 1230px;
             .best_hd{
                 font-size: 25px;
             }
@@ -207,6 +208,8 @@
                 .txt_item{
                     width: 25%;
                     height: 100%;
+                    flex-grow: 0;
+                    flex-shrink: 0;
                     overflow: auto;
                     &::-webkit-scrollbar{
                         width: 3px;
@@ -251,6 +254,7 @@
                             height: 310px;
                             margin-left: 15px;
                             position: relative;
+                            flex-shrink: 1;
                             .img_desc{
                                 margin: 10px 0;
                                 *{
@@ -409,6 +413,7 @@
             .wrt{
                 width: 100%;
                 height: auto;
+                margin: 15px;
                 a{
                     display: block;
                     border-radius: 60px;
@@ -427,6 +432,12 @@
                 }
             }
             
+        }
+    }
+    .addon{
+        @include layout(30px);
+        .addon_hd{
+            @include hd_shot;
         }
     }
 }
