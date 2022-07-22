@@ -137,5 +137,20 @@ header{
 }
 
 footer{
-    
+    width: 100%;
+    .footerbox{
+        @include layout;
+        padding-top: 40px;
+        @include flex(flex-start);
+        div{
+            margin: 15px;
+        }
+        .footer_info{
+            font-size: 14px;
+            ul{
+                display: flex;
+
+            }
+        }
+    }
 }

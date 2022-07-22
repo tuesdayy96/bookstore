@@ -127,3 +127,24 @@ header .hdmain .main_back .guide_btn #next1 {
 header .hdmain .main_back .guide_btn #next1:hover {
   background-image: url(../img/next_on.png);
 }
+
+footer {
+  width: 100%;
+}
+footer .footerbox {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+footer .footerbox div {
+  margin: 15px;
+}
+footer .footerbox .footer_info {
+  font-size: 14px;
+}
+footer .footerbox .footer_info ul {
+  display: flex;
+}

@@ -144,8 +144,8 @@
   align-items: center;
 }
 .section .today .todayBook ul li {
-  width: 260px;
-  height: 400px;
+  width: 20%;
+  height: auto;
   margin: 10px 20px 0 0;
 }
 .section .today .todayBook ul li a {
@@ -421,6 +421,7 @@
 }
 .section .writer {
   width: 100%;
+  overflow: hidden;
 }
 .section .writer .writer_hd {
   width: 80%;
@@ -492,6 +493,7 @@
 }
 .section .addon .addon_content ul li {
   width: 100%;
+  height: 300px;
   margin: 10px;
 }
 .section .addon .addon_content ul li a {
@@ -530,6 +532,7 @@
 .section .banner ul {
   width: 300%;
   height: 100%;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -537,7 +540,6 @@
 .section .banner ul li {
   width: 100%;
   height: 63px;
-  padding-left: 100px;
   position: relative;
 }
 .section .banner ul li div {
@@ -554,10 +556,12 @@
 .section .banner .banner_btn {
   display: flex;
   justify-content: flex-end;
-  width: 100%;
+  width: 70%;
+  min-width: 1091px;
+  height: 100%;
   position: absolute;
-  bottom: 40px;
-  right: 100px;
+  left: 100px;
+  top: 75px;
 }
 .section .banner .banner_btn a {
   display: inline-block;
@@ -590,4 +594,266 @@
 }
 .section .library_content {
   width: 100%;
+}
+.section .library_dot {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+.section .library_dot ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section .library_dot ul li {
+  margin: 5px;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #333;
+  border-radius: 6px;
+}
+.section .keyword {
+  width: 80%;
+  margin: 30px auto;
+}
+.section .keyword_hd {
+  margin: 30px 0;
+}
+.section .keyword_hd h3 {
+  font-size: 25px;
+}
+.section .keyword_hd p {
+  color: #808080;
+  margin: 5px 0 20px;
+}
+.section .keyword_content {
+  width: 1200px;
+  height: 330px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.section .keyword_content div {
+  width: 275px;
+  height: 150px;
+  margin: 0 15px 15px 0;
+  position: relative;
+}
+.section .keyword_content div strong {
+  display: block;
+  padding: 15px;
+}
+.section .keyword_content div img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.section .bunchul {
+  width: 100%;
+  min-width: 1300px;
+  background-image: url("../img/bunchul_main.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+.section .bunchul_inner {
+  display: flex;
+  width: 850px;
+  margin: 0 auto;
+  color: #fff;
+  padding-top: 50px;
+}
+.section .bunchul_inner .inner_left {
+  width: 70%;
+}
+.section .bunchul_inner .inner_left h4 {
+  font-size: 35px;
+  font-weight: lighter;
+}
+.section .bunchul_inner .inner_left h3 {
+  font-size: 35px;
+  margin-bottom: 50px;
+}
+.section .bunchul_inner .inner_left p {
+  margin-bottom: 10px;
+}
+.section .bunchul_inner .inner_left a {
+  color: #fff;
+}
+.section .bunchul_inner .inner_right {
+  width: 30%;
+  text-align: right;
+}
+.section .bunchul_inner .inner_right h3 {
+  font-size: 35px;
+}
+.section .bunchul_inner .inner_right p {
+  font-size: 20px;
+}
+.section .bunchul_inner .inner_right img {
+  position: relative;
+  z-index: 3;
+}
+.section .bunchul_list {
+  width: 60%;
+  margin: 0 auto;
+  transform: translateY(-100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section .bunchul_list li {
+  margin: 10px;
+  border-radius: 22px;
+  box-shadow: 1px 1px 4px rgba(100, 100, 100, 0.5);
+}
+.section .bunchul_review {
+  width: 60%;
+  height: 100px;
+  margin: 0 auto;
+  margin-top: -80px;
+  margin-bottom: 50px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.section .outro {
+  width: 100%;
+  min-width: 1300px;
+  height: auto;
+}
+.section .outro_desc {
+  width: 80%;
+  margin: 40px auto;
+  display: flex;
+}
+.section .outro_desc .outro_item {
+  width: 300px;
+}
+.section .outro_desc .outro_item h3 {
+  font-size: 25px;
+}
+.section .outro_desc .outro_item .bar {
+  width: 30px;
+  height: 5px;
+  background-color: #111;
+  margin: 10px 0;
+}
+.section .outro_desc .outro_item h4 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+.section .outro_desc .outro_item p {
+  color: rgb(100, 100, 100);
+}
+.section .outro_desc .outro_item p.first {
+  color: rgb(50, 50, 50);
+  font-weight: 600;
+}
+.section .outro .last {
+  font-size: 25px;
+}
+.section .cardnews {
+  width: 100%;
+}
+.section .cardnews_title {
+  width: 1140px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.section .cardnews_title h3 {
+  font-size: 25px;
+}
+.section .cardnews_title p {
+  color: #808080;
+  margin: 5px 0 20px;
+}
+.section .cardnews_content {
+  width: 1140px;
+  margin: 0 auto;
+  height: 609px;
+  background-color: rgb(50, 50, 50);
+  position: relative;
+}
+.section .cardnews_content span {
+  float: left;
+  display: inline-block;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+.section .cardnews_content span img {
+  width: 100%;
+  height: 100%;
+}
+.section .cardnews_content span:first-child {
+  width: 704px;
+  height: 569px;
+}
+.section .cardnews_content span + span {
+  width: 183px;
+  height: 183px;
+}
+.section .cardnews_content .plus {
+  position: absolute;
+  bottom: 15px;
+  right: 25px;
+}
+.section .cardnews_content .side {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  z-index: 5;
+  right: 0;
+  bottom: 0;
+}
+.section .cardnews_icon {
+  width: 1140px;
+  margin: 0 auto;
+  height: 60px;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.section .cardnews_icon span {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  margin-right: 10px;
+}
+.section .cardnews_icon span.keep {
+  background-image: url("../img/btn_keep.png");
+  background-repeat: no-repeat;
+}
+.section .cardnews_icon span.cart {
+  background-image: url("../img/btn_cart.png");
+  background-repeat: no-repeat;
+}
+.section .notice {
+  width: 100%;
+  height: 70px;
+  margin-top: 50px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.section .notice div {
+  width: 1140px;
+  padding: 20px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.section .notice div span {
+  display: block;
+  width: 100px;
+  text-align: center;
+}
+.section .notice div p {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
