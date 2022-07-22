@@ -149,6 +149,75 @@ $(function(){
     }
 })
 
+// 라이브러리
+$(function(){
+    var slides = document.querySelector('.library_slide');
+    var slideImg = document.querySelectorAll('.item');
+    var idx = 0;
+    var slideIdx = slideImg.length;
+    var prev_btn = document.querySelector('.library_btn .prev');
+    var next_btn = document.querySelector('.library_btn .next');
+    var s_Width = $('.item').width();
+
+    makeClone();
+    function makeClone(){
+        let cloneSlide_f = slideImg[0].cloneNode(true);
+        let cloneSlide_l = slides.lastElementChild.cloneNode(true);
+        slides.append(cloneSlide_f);
+        slides.insertBefore(cloneSlide_l, slides.firstElementChild);
+    }
+        
+    initslide();
+    function initslide(){
+        slides.style.width = s_Width * (slideIdx + 2) + 'px';
+        slides.style.left = -s_Width + 'px';
+    }
+    next_btn.addEventListener('click',function(){
+        nextslide();
+    })
+    function nextslide(){
+        if(idx <= slideIdx - 1){
+            slides.style.left = -(idx + 2) * s_Width + 'px';
+            slides.style.transition = '0.5s ease-out';
+        }
+        if(idx === slideIdx - 1 ){
+            setTimeout(function(){
+                slides.style.left = -s_Width + 'px';
+                slides.style.transition = '0s ease-out';
+            },500);
+            idx = -1;
+        }
+        idx += 1;
+        $('.dot li').removeClass('on');
+        $('.dot li').eq(idx).addClass('on');
+    }
+
+    prev_btn.addEventListener('click',function(){
+        prevSlide();
+    })
+    function prevSlide(){
+        if(idx >=0){
+            slides.style.left = -idx * s_Width + 'px';
+            slides.style.transition = '0.5s ease-out';
+        }
+        if(idx === 0){
+            setTimeout(function(){
+                slides.style.left = -slideIdx * s_Width + 'px';
+                slides.style.transition = 'all 0s ease-out';
+            },500);
+            idx = slideIdx;
+        }
+        idx -=1;
+        $('.dot li').removeClass('on');
+        $('.dot li').eq(idx).addClass('on');
+    }
+    $('.dot li').click(function(){
+        idx = $(this).index();
+        nextslide();
+        prevSlide();
+    })
+})
+
 // 배너 이벤트
 $(function(){
     $('.banner_btn .next').click(function(){
@@ -172,4 +241,22 @@ $(function(){
     $('.banner_btn').on('mouseleave',function(){
         set_banner = setInterval(slideBanner,5000);
     })
+})
+
+// 분철노트 슬라이드
+$(function(){
+    $('.bunchul_btn .next').click(function(){
+        bunchulSlide();
+    })
+    $('.bunchul_btn .prev').click(function(){
+        $('.bunchul_slide li:last').prependTo('.bunchul_slide');
+        $('.bunchul_slide').css({marginLeft:-100+'%'});
+        $('.bunchul_slide').stop().animate({marginLeft:0})
+    })
+    function bunchulSlide(){
+        $('.bunchul_slide').stop().animate({marginLeft:-100+'%'},function(){
+            $('.bunchul_slide li:first').appendTo('.bunchul_slide');
+            $('.bunchul_slide').css({marginLeft:0});
+        })
+    }
 })
