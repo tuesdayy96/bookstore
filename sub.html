@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공부서점 | 수험서 전문 온라인 1등</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+    <link rel="icon" href="img/icon.png">
+    <script src="js/sub_db.js"></script>
+    <link rel="stylesheet" href="css/sub.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Macondo&family=Merriweather&family=Noto+Sans+KR&family=Rubik+Glitch&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="hdtop"></div>
+        <div class="hdgroup">
+            <ul class="hdgroup_li">
+                <li><a href="#">로그인</a></li>
+                <li>|</li>
+                <li><a href="#">회원가입</a></li>
+                <li>|</li>
+                <li><a href="#">장바구니</a></li>
+                <li>|</li>
+                <li><a href="#">주문·배송내역</a></li>
+                <li>|</li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+        </div>
+        <div class="hdmain">
+            <div class="main_front">
+                <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+                <form action="#">
+                    <div class="searchbox">
+                        <input type="text">
+                        <input id="sch_btn" type="image" alt="#" src="img/search.png">
+                    </div>
+                </form>
+            </div>
+            <div class="main_back">
+                <a href="#" class="category">
+                    <span>전체 분야 </span>
+                    <img src="img/menu.png" alt="">
+                </a>
+                <div class="guideline">
+                    <div class="guide">
+                        <ul class="guide_wrap">
+                            <li class="guide_li">
+                                <a href="#">
+                                    <img src="img/guide1.png" alt="">
+                                    <span>2023 공단기</span>
+                                    <span>기본서 출간 기념</span>
+                                </a>
+                            </li>
+                            <li class="guide_li">
+                                <a href="#">
+                                    <img src="img/guide2.png" alt="">
+                                    <span>2023 이동기 영어</span>
+                                    <span>출간 이벤트</span>
+                                </a>
+                            </li>
+                            <li class="guide_li">
+                                <a href="#">
+                                    <img src="img/guide3.png" alt="">
+                                    <span>데이터가 증명하는</span>
+                                    <span>공시생 가이드</span>
+                                </a>
+                            </li>
+                            <li class="guide_li">
+                                <a href="#">
+                                    <img src="img/guide4.png" alt="">
+                                    <span>공부서점 베스트셀러</span>
+                                    <span>분철 무료!</span>
+                                </a>
+                            </li>
+                            <li class="guide_li">
+                                <a href="#">
+                                    <img src="img/guide5.png" alt="">
+                                    <span>필기 시험 합격한다면</span>
+                                    <span>면접 준비는 여기서</span>
+                                </a>
+                            </li>
+                            <li class="guide_li">
+                                <a href="#">
+                                    <img src="img/guide6.png" alt="">
+                                    <span>공부서점 단독!</span>
+                                    <span>2022 공단기 기획전</span>
+                                </a>
+                            </li>
+                            <li class="guide_li">
+                                <a href="#">
+                                    <img src="img/guide7.png" alt="">
+                                    <span>나만의 컬러를 입다</span>
+                                    <span>New 포커스노트</span>
+                                </a>
+                            </li>
+                            <li class="guide_li">
+                                <a href="#">
+                                    <img src="img/guide8.png" alt="">
+                                    <span>온라인 1등</span>
+                                    <span>공부서점</span>
+                                </a>
+                            </li>
+                            <li class="guide_li">
+                                <a href="#">
+                                    <img src="img/guide9.png" alt="">
+                                    <span>공부필수템 최저가</span>
+                                    <span>애드온</span>
+                                </a>
+                            </li>
+                            <li class="guide_li">
+                                <a href="#">
+                                    <img src="img/guide10.png" alt="">
+                                    <span>공부서점</span>
+                                    <span>ONLY! 시리즈</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="guide_btn">
+                    <span id="prev1"></span>
+                    <span id="next1"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="section">
+        <div class="root">
+            <ul class="to_deep">
+                <li><a href="#">홈</a></li>
+                <li><a href="#">국내도서</a></li>
+                <li><a href="#">문학</a></li>
+                <li><a href="#">장르소설</a></li>
+                <li><a href="#">판타지</a></li>
+                <li><a href="#">외국 판타지</a></li>
+            </ul>
+            <ul class="icon">
+                <li><a href=""><img src="img/sub/share.png" alt=""></a></li>
+                <li><a href=""><img src="img/sub/keep_m.png" alt=""></a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="imgPop">
+                <span class="popclose"><a href="">X</a></span>
+                <img src="img/sub/book.jpg" alt="">
+            </div>
+            <div class="imgSide">
+                <a href="#"><img class="closeup" src="img/sub/book.jpg" alt=""></a>
+                <p><span><img src="img/sub/best.png" alt=""></span>공부서점 종합 베스트셀러 154위</p>
+                <p><img src="img/sub/star_b_on.png" alt=""></p>
+            </div>
+            <div class="descSide">
+                <h3>세상의 마지막 기차역</h3>
+                <ul>
+                    <li>무라세 다케시 지음</li>
+                    <li>김지연 옮김</li>
+                    <li>모모 펴냄</li>
+                    <li class="border">출간일 : 2022-05-11</li>
+                    <li class="border">원서 : 西由比ヶ浜驛の神樣</li>
+                </ul>
+                <div class="bunchul_a">
+                    <div class="left">
+                        <strong>분철신청</strong>
+                    </div>
+                    <div class="right">
+                        <p>분철 신청 불가 상품</p>
+                        <span>* 양장본, 스프링, 지퍼형태, CD포함 도서/규격에 맞지 않는 도서(최소 128x188 최대 235x310mm) 또는 문구 상품은 분철 서비스가 불가 합니다.</span>
+                    </div>
+                </div>
+                <div>
+                    <strong>구매혜택</strong>
+                </div>
+                <div class="count">
+                    <div class="left">
+                        <strong>구매수량</strong>
+                    </div>
+                    <div class="right">
+                        <div class="btn">
+                            <span onclick="del()" class="minus"></span>
+                            <input onchange="change()" id="amount" type="text" value="1" >
+                            <span onclick="add()" class="plus"></span>
+                        </div>
+                        <div class="price">
+                            <p>14,000</p>
+                            <strong class="total"><span>합계</span>12,600원</strong>
+                            <em><span class="point">적립</span>적립금 700원<span class="discount">(5%)</span></em>
+                        </div>
+                    </div>
+                </div>
+                <div class="buy">
+                      <a href="" class="cart">장바구니</a>
+                      <a href="" class="buying">구매하기</a>      
+                </div>
+                <div class="info"> 
+                    <p><span>적립금</span>700원</p>
+                    <p><span>혜택</span>공부서점 회원 최대 16,500원 혜택</p>
+                    <p><span>참고사항</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="adds">
+            <div class="adds_title">
+                <span class="on">함께 구매한 애드온</span><span>많이 구매한 애드온</span>
+            </div>
+            <div class="adds_inner">
+                <div class="both">
+                    <div class="left">
+                        <strong>이 책을<br> 구입하신 분들이<br> <span>함께 구매한 애드온</span></strong><br>
+                        <form action="#">
+                            <div>
+                                <input type="checkbox" name="selectAll" id="selectAll">
+                                <label for="selectAll">전체 상품 선택</label>
+                            </div>                     
+                            <div>
+                                <a href="#"><img src="img/sub/keep_m.png" alt=""><span>보관함</span></a>
+                                <a href="#"><img src="img/sub/cart.png" alt=""><span>장바구니</span></a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="right">
+                        <div class="right_wrap">
+                            <ul class="right_slide">
+                                <li class="overlap">
+                                    <div class="chx"><input type="checkbox"></div>
+                                    <a href=""><img src="img/add1.jpg" alt=""></a>
+                                    <h4>(볼펜형)기화펜 순삭펜 기출펜 사라지는 지워지는 볼펜심 60개 + 바디 2개(기화펜)</h4>
+                                    <span>GELISI</span>
+                                    <p><strong>3,900원</strong>(<span>35%</span>)</p>
+                                </li>
+                                <li class="overlap">
+                                    <div class="chx"><input type="checkbox"></div>
+                                    <a href=""><img src="img/add2.jpg" alt=""></a>
+                                    <h4>3M 견출테이프 683-9KP</h4>
+                                    <span>3M</span>
+                                    <p><strong>1,920원</strong>(<span>36%</span>)</p>
+                                </li>
+                                <li class="overlap">
+                                    <div class="chx"><input type="checkbox"></div>
+                                    <a href=""><img src="img/add3.png" alt=""></a>
+                                    <h4>북프렌즈 스마트 독서대 (모비딕)</h4>
+                                    <span>북프렌즈</span>
+                                    <p><strong>9,080원</strong>(<span>49%</span>)</p>
+                                </li>
+                                <li>
+                                    <div class="chx"><input type="checkbox"></div>
+                                    <a href=""><img src="img/add4.jpg" alt=""></a>
+                                    <h4>제브라 마일드라이너 NC 5색 세트(마일드라이너)</h4>
+                                    <span>ZEBRA</span>
+                                    <p><strong>5,580원</strong>(<span>38%</span>)</p>
+                                </li>
+                                <li>
+                                    <div class="chx"><input type="checkbox"></div>
+                                    <a href=""><img src="img/add5.jpg" alt=""></a>
+                                    <h4>인디고 혼자공부 메타 스터디 플래너 6개월용 (아이보리)(혼자공부 메타 스터디 플래너)</h4>
+                                    <span>Indigo</span>
+                                    <p><strong>6,860원</strong>(<span>30%</span>)</p>
+                                </li>
+                                <li>
+                                    <div class="chx"><input type="checkbox"></div>
+                                    <a href=""><img src="img/add6.jpg" alt=""></a>
+                                    <h4>위즈독서대 루미50 2단독서대</h4>
+                                    <span>위즈독서대(이엔)</span>
+                                    <p><strong>30,800원</strong>(<span>30%</span>)</p>
+                                </li>
+                                <li>
+                                    <div class="chx"><input type="checkbox"></div>
+                                    <a href=""><img src="img/add7.jpg" alt=""></a>
+                                    <h4>미쯔비시 제트스트림 리필심(SXR7) 흑색 5개입(단색용 리필심)</h4>
+                                    <span>미쯔비시</span>
+                                    <p><strong>4,230원</strong>(<span>35%</span>)</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="right_btn">
+                            <span class="prev"></span>
+                            <span class="next"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footerbox">
+            <div class="footer_logo">
+                <img src="img/bi_footer.png" alt="">
+            </div>
+            <div class="footer_info">
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li>·</li>
+                    <li><a href="#">이용약관[변경내용]</a></li>
+                    <li>·</li>
+                    <li><a href="#" class="blue">개인정보처리방침[변경내용]</a></li>
+                    <li>·</li>
+                    <li><a href="#">고객센터</a></li>
+                    <li>·</li>
+                    <li><a href="#">윤리경영</a></li>
+                </ul>
+                <ul>
+                    <li>㈜에스티유니타스 커머스</li>
+                    <li>|</li>
+                    <li>대표이사 : 김정택</li>
+                    <li>|</li>
+                    <li>사업자등록번호 : 530-85-00416</li>
+                    <li>|</li>
+                    <li>통신판매업신고 : 제2016-경기파주-0313호 [사용자 정보확인]</li>
+                </ul>
+                <ul>
+                    <li>사업장 주소 : 서울시 강남구 영동대로 417</li>
+                    <li>|</li>
+                    <li>물류센터주소 : 경기도 파주시 직지길 322 (문발동 507-4)</li>
+                </ul>
+                <ul>
+                    <li>고객센터 : 1670-1489</li>
+                    <li>|</li>
+                    <li>제휴/도서홍보</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="js/sub.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>

@@ -141,8 +141,8 @@ $(function(){
     var key_li = $('.it')
     var total_arr = [
         ['종합','문학','인문','경제','자기계발','어린이','자격증'],
-        ['그림책','웹툰','장편소설','영화','연휴','시리즈','에세이','기분전환','유퀴즈','사랑','스타','노벨문학상','어른동화','젋은 작가','시집','여름소설','추리소설','셀럽','웹툰원작','반려동물','힐링','고전','소장욕구','킬링타임','연애'],
-        ['마케팅','환경','우주과학','기후변화','지식','인공지능','뇌과학','추천','맛','대학생','미술','역사','철학','필수 역사'],
+        ['그림책','웹툰','장편소설','영화','연휴','시리즈','에세이','기분전환','유퀴즈','사랑','스타','노벨문학상','어른동화','신인작가','시집','여름소설','추리소설','셀럽','웹툰원작','반려동물','힐링','고전','소장','킬링타임','연애'],
+        ['마케팅','환경','우주과학','기후변화','지식','인공지능','뇌과학','추천','맛','대학생','미술','역사','철학','히스토리'],
         ['재테크','2022 경제','코로나','블록체인','부동산','내 집 마련','언택트','브랜딩','인사이트','돈','창업','경제 트렌드','저축'],
         ['원어민 영어','대학교재','자격증 취득','기출문제','NCS','취업 자격증','한국사','자소서','모의고사'],
         ['취미','MZ','에코라이프','가스라이팅','유튜버','랜선','자존감','집콕','동기부여','보람','현대인','나만의','정리','청춘','성장','"나"'],
@@ -156,7 +156,6 @@ $(function(){
         headers : {Authorization :"KakaoAK 0abe6ac39569f3f00d940ada52fddad3"},
     })
     .done(function(data){
-        console.log(data)
         for(var i in data.documents){
             $('.img_idx').eq(i).html(parseInt(i)+1);
             $('.img_au').eq(i).html(data.documents[i].authors[0]+" <small>지음<small>");
@@ -173,7 +172,6 @@ $('.cg_list li').click(function(){
         headers : {Authorization :"KakaoAK 0abe6ac39569f3f00d940ada52fddad3"},
     })
     .done(function(data){
-        console.log(data)
         for(var i in data.documents){
             $('.img_idx').eq(i).html(parseInt(i)+1);
             $('.img_au').eq(i).html(data.documents[i].authors[0]+" <small>지음<small>");
@@ -194,7 +192,6 @@ $('.cg_list li').click(function(){
                 headers : {Authorization :"KakaoAK 0abe6ac39569f3f00d940ada52fddad3"},
             })
             .done(function(data){
-                console.log(data)
                 for(var j in data.documents){
                     $('.img_idx').eq(i).html(parseInt(i)+1);
                     $('.img_au').eq(i).html(data.documents[i].authors[0]+" <small>지음<small>");

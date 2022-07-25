@@ -8,6 +8,8 @@
 }
 .section .sec_main {
   width: 100%;
+  min-width: 1140px;
+  margin: 0 auto;
   height: 400px;
   background: linear-gradient(to top, rgba(230, 230, 230, 0.1) 50%, #e4e4f4);
   position: relative;

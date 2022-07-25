@@ -1,0 +1,384 @@
+.section {
+  width: 100%;
+}
+
+.root {
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+  width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.root .to_deep {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 12px;
+}
+.root .to_deep li {
+  margin: 5px;
+}
+.root .to_deep li::after {
+  content: ">";
+  margin-left: 10px;
+}
+.root .to_deep li:last-child:after {
+  content: "";
+}
+.root .icon {
+  display: flex;
+}
+.root .icon li {
+  margin: 10px;
+}
+
+.main {
+  width: 1140px;
+  margin: 30px auto;
+  display: flex;
+  height: 750px;
+}
+.main .imgPop {
+  position: absolute;
+  width: 560px;
+  height: 810px;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 0 6px #3a3c3c;
+  border-radius: 10px;
+  display: none;
+  cursor: pointer;
+}
+.main .imgPop span {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 20px;
+}
+.main .imgPop img {
+  margin-top: 20px;
+}
+.main .imgSide {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  padding: 15px;
+}
+.main .imgSide a {
+  display: inline-block;
+  margin-bottom: 50px;
+}
+.main .imgSide a img {
+  width: 300px;
+  height: 460px;
+  box-shadow: 0 0 8px #888;
+}
+.main .imgSide p {
+  font-size: 14px;
+  padding: 10px;
+}
+.main .imgSide p span {
+  margin-right: 3px;
+}
+.main .imgSide p span img {
+  width: 25px;
+  height: 20px;
+}
+.main .descSide {
+  width: 50%;
+  height: 100%;
+}
+.main .descSide h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.main .descSide ul {
+  display: flex;
+  font-size: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.main .descSide ul li {
+  padding: 3px 10px;
+  margin: 0 10px 10px 0;
+  border-radius: 20px;
+  background-color: #EBEDF7;
+  color: #888;
+  box-shadow: 0 0 1px #ddd;
+}
+.main .descSide ul li.border {
+  background-color: transparent;
+  border: 1px solid #EBEDE7;
+}
+.main .descSide > div {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: 1px solid rgba(100, 100, 100, 0.5);
+}
+.main .descSide .left {
+  width: 25%;
+}
+.main .descSide .bunchul_a {
+  display: flex;
+}
+.main .descSide .bunchul_a .right {
+  width: 75%;
+}
+.main .descSide .bunchul_a .right p {
+  padding: 10px 15px;
+  border: 1px solid rgba(100, 100, 100, 0.5);
+  color: rgb(100, 100, 100);
+  font-size: 12px;
+}
+.main .descSide .bunchul_a .right span {
+  font-size: 10px;
+}
+.main .descSide .count {
+  display: flex;
+}
+.main .descSide .count .right {
+  text-align: right;
+  width: 75%;
+}
+.main .descSide .count .right .btn {
+  display: flex;
+}
+.main .descSide .count .right .btn input {
+  width: 60px;
+  border: none;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+.main .descSide .count .right .btn span {
+  cursor: pointer;
+  display: block;
+  width: 28px;
+  height: 28px;
+}
+.main .descSide .count .right .btn .minus {
+  background-image: url("/img/sub/btn_minus.png");
+}
+.main .descSide .count .right .btn .plus {
+  background-image: url("/img/sub/btn_plus.png");
+}
+.main .descSide .count .right .price * {
+  margin-bottom: 5px;
+}
+.main .descSide .count .right .price p {
+  text-decoration: line-through;
+  color: #888;
+  font-weight: bold;
+}
+.main .descSide .count .right .price strong {
+  display: block;
+  font-size: 30px;
+}
+.main .descSide .count .right .price strong span {
+  font-size: 14px;
+}
+.main .descSide .count .right .price span {
+  margin: 10px;
+}
+.main .descSide .count .right .price em {
+  font-size: 12px;
+  color: #e68405;
+}
+.main .descSide .count .right .price em .point {
+  padding: 0 10px;
+  line-height: 10px;
+  background-color: #e68405;
+  color: #fff;
+  border-radius: 8px;
+}
+.main .descSide .count .right .price em .discount {
+  color: #333;
+}
+.main .descSide .buy {
+  display: flex;
+  border: none;
+  padding-top: 0;
+}
+.main .descSide .buy a {
+  display: block;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+.main .descSide .buy a.cart {
+  color: #464b6f;
+  border-left: 1px solid #ddd;
+}
+.main .descSide .buy a.buying {
+  background-color: #464b6f;
+  color: #fff;
+  box-shadow: 0 0 4px 2px #ddd;
+}
+.main .descSide .info {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #888;
+  padding: 10px;
+}
+.main .descSide .info p {
+  margin: 5px;
+  width: 100%;
+}
+.main .descSide .info p span {
+  display: inline-block;
+  width: 100px;
+}
+
+.adds {
+  width: 100%;
+  height: 100%;
+}
+.adds .adds_title {
+  width: 1140px;
+  margin: 0 auto;
+  height: 100%;
+}
+.adds .adds_title span {
+  display: inline-block;
+  padding: 15px 30px;
+  border: 1px solid rgba(100, 100, 100, 0.5);
+  border-bottom: none;
+}
+.adds .adds_title span:first-child {
+  border-right: none;
+}
+.adds .adds_title span.on {
+  background-color: #fcfcff;
+}
+.adds .adds_inner {
+  background-color: #fcfcff;
+  width: 100%;
+}
+.adds .adds_inner .both {
+  width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.adds .adds_inner .both .left {
+  width: 20%;
+  padding: 20px;
+  font-size: 12px;
+}
+.adds .adds_inner .both .left strong {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.adds .adds_inner .both .left form > div {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.adds .adds_inner .both .left form > div input {
+  margin-right: 5px;
+}
+.adds .adds_inner .both .left form > div a {
+  display: flex;
+  align-items: center;
+  width: 105px;
+  height: 45px;
+  padding: 10px;
+  background-color: #fefefe;
+  border: 1px solid rgba(100, 100, 100, 0.5);
+}
+.adds .adds_inner .both .left form > div a img {
+  margin-right: 5px;
+}
+.adds .adds_inner .both .left form > div a:first-child {
+  border-right: none;
+}
+.adds .adds_inner .both .right {
+  width: 80%;
+  position: relative;
+}
+.adds .adds_inner .both .right_wrap {
+  width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.adds .adds_inner .both .right_slide {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.adds .adds_inner .both .right_slide li {
+  margin: 10px;
+  padding: 10px;
+  height: 270px;
+  text-align: center;
+  position: relative;
+}
+.adds .adds_inner .both .right_slide li .chx {
+  position: absolute;
+  top: -3px;
+  left: 5px;
+}
+.adds .adds_inner .both .right_slide li a {
+  display: block;
+  width: 121px;
+  height: 167px;
+}
+.adds .adds_inner .both .right_slide li a img {
+  width: 100%;
+  height: 100%;
+}
+.adds .adds_inner .both .right_slide li h4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 12px;
+}
+.adds .adds_inner .both .right_slide li span {
+  font-size: 12px;
+}
+.adds .adds_inner .both .right_slide li p span {
+  color: #ff0000;
+}
+.adds .adds_inner .both .right_btn {
+  padding-top: 10px;
+  display: flex;
+}
+.adds .adds_inner .both .right_btn span {
+  margin: 5px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.adds .adds_inner .both .right_btn .prev {
+  display: block;
+  width: 32px;
+  height: 32px;
+  left: 0;
+  background-image: url(../img/prev_off.png);
+}
+.adds .adds_inner .both .right_btn .prev:hover {
+  background-image: url(../img/prev_on.png);
+}
+.adds .adds_inner .both .right_btn .next {
+  display: block;
+  width: 32px;
+  height: 32px;
+  right: 0;
+  background-image: url(../img/next_off.png);
+}
+.adds .adds_inner .both .right_btn .next:hover {
+  background-image: url(../img/next_on.png);
+}
