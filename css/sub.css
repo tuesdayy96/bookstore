@@ -382,3 +382,55 @@
 .adds .adds_inner .both .right_btn .next:hover {
   background-image: url(../img/next_on.png);
 }
+
+.banner {
+  width: 100%;
+}
+.banner_inner {
+  width: 1140px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.books {
+  margin-top: 100px;
+  width: 100%;
+}
+.books_anchor {
+  width: 100%;
+  background-color: #ddd;
+  height: 55px;
+}
+.books_anchor > div {
+  width: 1140px;
+  margin: 0 auto;
+  padding-top: 5px;
+}
+.books_anchor > div span {
+  display: inline-block;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  text-align: center;
+}
+.books_anchor > div span.on {
+  font-weight: bold;
+  background-color: #fff;
+}
+.books_wrap {
+  width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+}
+.books_wrap .books_desc {
+  width: 750px;
+}
+.books_wrap .books_bar {
+  width: 300px;
+}

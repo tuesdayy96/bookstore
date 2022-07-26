@@ -375,3 +375,47 @@
         }
     }
 }
+.banner{
+    width: 100%;
+    &_inner{
+        @include layout(30px);
+        @include flex(space-between);
+    }
+}
+.books{
+    margin-top: 100px;
+    width: 100%;
+    &_anchor{
+        width: 100%;
+        background-color: #ddd;
+        height: 55px;
+        >div{
+            @include layout();
+            padding-top: 5px;
+            span{
+                display: inline-block;
+                width: 250px;
+                height: 50px;
+                line-height: 50px;
+                font-size: 16px;
+                text-align: center;
+                &.on{
+                    font-weight: bold;
+                    background-color: #fff;
+                }
+            }
+        }
+        
+    }
+    &_wrap{
+        @include layout;
+        @include flex(space-between);
+        padding-top: 50px;
+        .books_desc{
+            width: 750px;
+        }
+        .books_bar{
+            width: 300px;
+        }
+    }
+}
