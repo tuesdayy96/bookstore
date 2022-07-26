@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .section {
   width: 100%;
 }
@@ -425,12 +426,142 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding-top: 50px;
 }
 .books_wrap .books_desc {
   width: 750px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  height: 2200px;
+}
+.books_wrap .books_desc.active {
+  height: auto;
+}
+.books_wrap .books_desc h2 {
+  border-top: 1px solid rgba(150, 150, 150, 0.5);
+  text-align: left;
+  padding-top: 20px;
+  margin-bottom: 50px;
+}
+.books_wrap .books_desc p {
+  line-height: 30px;
+  margin: 40px 0;
+  font-size: 14px;
+  text-align: left;
+  color: #212121;
+  font-family: "맑은 고딕", sans-serif;
+}
+.books_wrap .books_desc div {
+  margin-bottom: 80px;
+}
+.books_wrap .books_desc div img {
+  position: relative;
+  z-index: -1;
+}
+.books_wrap .books_desc div ul {
+  display: flex;
+}
+.books_wrap .books_desc div ul li:not(:last-child):after {
+  content: ">";
+  margin-left: 20px;
+}
+.books_wrap .books_desc div ul li {
+  margin: 10px;
+}
+.books_wrap .books_desc .product_btn {
+  width: 100%;
+  position: absolute;
+  height: 500px;
+  bottom: 0px;
+  left: 0;
+  margin: 0;
+}
+.books_wrap .books_desc .product_btn.active {
+  background-image: url("../img/sub/bg_btn_more.png");
+}
+.books_wrap .books_desc .product_btn span {
+  cursor: pointer;
+  background-color: #333333;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 62px;
+  text-align: center;
+  color: #FFFFFF;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 40px;
+  width: 480px;
+  position: absolute;
+  bottom: 10px;
+  left: 155px;
 }
 .books_wrap .books_bar {
   width: 300px;
+}
+.books_wrap .books_bar .bar_body {
+  width: 100%;
+}
+.books_wrap .books_bar .bar_body .bar_top {
+  padding: 20px;
+  width: 300px;
+  height: 500px;
+  border: 1px solid #3a3c3c;
+}
+.books_wrap .books_bar .bar_body .bar_top .top_info {
+  display: flex;
+  justify-content: center;
+}
+.books_wrap .books_bar .bar_body .bar_top .top_info .left {
+  margin-right: 10px;
+}
+.books_wrap .books_bar .bar_body .bar_top .top_info .left span {
+  padding: 10px;
+  display: block;
+  border: 1px solid rgba(150, 150, 150, 0.3);
+}
+.books_wrap .books_bar .bar_body .bar_top .top_info .left span img {
+  width: 70px;
+}
+.books_wrap .books_bar .bar_body .bar_top .top_info .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.books_wrap .books_bar .bar_body .bar_top .top_info .btn {
+  display: flex;
+}
+.books_wrap .books_bar .bar_body .bar_top .top_info .btn input {
+  width: 60px;
+  border: none;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+.books_wrap .books_bar .bar_body .bar_top .top_info .btn span {
+  cursor: pointer;
+  display: block;
+  width: 28px;
+  height: 28px;
+}
+.books_wrap .books_bar .bar_body .bar_top .top_info .btn .minus {
+  background-image: url("/img/sub/btn_minus.png");
+}
+.books_wrap .books_bar .bar_body .bar_top .top_info .btn .plus {
+  background-image: url("/img/sub/btn_plus.png");
+}
+.books_wrap .books_bar .bar_body .bar_top .top_info2 p {
+  margin: 10px;
+  padding: 10px;
+  font-size: 14px;
+  color: rgba(100, 100, 100, 0.8);
+  border: 1px solid rgba(150, 150, 150, 0.5);
+}
+.books_wrap .books_bar .bar_body .bar_top .top_info2 span {
+  display: block;
+  padding: 10px;
+  font-size: 10px;
+  text-align: left;
+  margin: 10px;
 }

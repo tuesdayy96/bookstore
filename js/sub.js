@@ -66,6 +66,8 @@ $(function(){
     })
 })
 
+// 버튼 클릭
+
 $(function(){
     $('.right_slide li:Lt(3)').clone().addClass('cloned').removeClass('overlap').appendTo('.right_slide');
     $('.right_btn .next').click(function(){
@@ -76,3 +78,4 @@ $(function(){
         $('.right_slide').stop().animate({marginLeft:0+'%'});
     })
 })
+
