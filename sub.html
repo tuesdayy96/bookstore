@@ -292,8 +292,8 @@
         <div class="books">
             <div class="books_anchor">
                 <div>
-                    <a href=""><span class="on">책 소개</span></a>
-                    <a href=""><span>리뷰</span></a>
+                    <a href="javascript:void(0)"><span class="on">책 소개</span></a>
+                    <a href="javascript:void(0)"><span class="to_review">리뷰</span></a>
                 </div>
             </div>
             <div class="books_wrap">
@@ -310,9 +310,9 @@
                                 <div class="right">
                                     <strong>세상의 마지막 기차역</strong>
                                     <div class="btn">
-                                        <span onclick="" class="minus"></span>
-                                        <input onchange="" type="text" value="1" >
-                                        <span onclick="" class="plus"></span>
+                                        <span onclick="del2()" class="minus"></span>
+                                        <input onchange="change2()" id="amount2" type="text" value="1" >
+                                        <span onclick="add2()" class="plus"></span>
                                     </div>
                                 </div>
                             </div>
@@ -320,7 +320,7 @@
                                 <p>분철 신청 불가 상품</p>
                                 <span>* 양장본, 스프링, 지퍼형태, CD포함 도서/규격에 맞지 않는 도서(최소 128x188 최대 235x310mm) 또는 문구 상품은 분철 서비스가 불가 합니다.</span>
                             </div>
-                            <div class="price">
+                            <div class="total2">
                                <span>합계</span>
                                <span>12,600원</span>
                             </div>
@@ -392,18 +392,54 @@
                 <div class="review_star">
                     <div>
                         <strong>리뷰</strong>
-                        <span>총 2권</span>
+                        <span>총 2건</span>
                     </div>
                     <div class="score">
                         <img src="img/sub/star_b_on.png" alt="">
                     </div>
                 </div>
                 <div class="review_list">
-    
+                    <div class="review_o">
+                        <strong>[일반리뷰] 배송</strong>
+                        <ul>
+                            <li>parko***</li>
+                            <li>|</li>
+                            <li><img src="img/sub/star_s_on.png" alt=""></li>
+                            <li>|</li>
+                            <li>2022-06-19</li>
+                        </ul>
+                        <p><img src="img/sub/review.jpeg" alt=""></p>
+                        <span>배송이 빨라서 좋아요</span>
+                        <div>
+                            <a href=""><span><img src="img/sub/smile.png" alt="">공감해요</span>0</a>
+                        </div>
+                    </div>
+                    <div class="review_o">
+                        <strong>[일반리뷰] 재밌어요!!!</strong>
+                        <ul>
+                            <li>a987***</li>
+                            <li>|</li>
+                            <li><img src="img/sub/star_s_on.png" alt=""></li>
+                            <li>|</li>
+                            <li>2022-05-28</li>
+                        </ul>
+                        <span>인스타에서 많이 보여서 구매했는데 재밌네요 ㅎㅎ</span>
+                        <div>
+                            <a href=""><span><img src="img/sub/smile.png" alt="">공감해요</span>0</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        
+        <div class="sns">
+            <ul>
+                <li class="fb"><img src="img/sub/icons_facebook.svg" alt=""></li>
+                <li class="ln"><img src="img/sub/icons_line.svg" alt=""></li>
+                <li class="kk"><img src="img/sub/icons_kakao.svg" alt=""></li>
+                <li class="pt"><img src="img/sub/icons_pinterest.svg" alt=""></li>
+                <li class="tw"><img src="img/sub/icons_twitter.svg" alt=""></li>
+            </ul>
+        </div>
     </div>
 
     <footer>

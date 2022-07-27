@@ -1,10 +1,14 @@
 @charset "UTF-8";
+footer {
+  border-top: 1px solid rgba(150, 150, 150, 0.3);
+}
+
 .section {
   width: 100%;
+  border-top: 1px solid rgba(150, 150, 150, 0.3);
 }
 
 .root {
-  border-top: 1px solid #ddd;
   padding-top: 15px;
   width: 1140px;
   margin: 0 auto;
@@ -570,7 +574,7 @@
   text-align: left;
   margin: 10px;
 }
-.books_wrap .books_bar .bar_body .bar_top .price {
+.books_wrap .books_bar .bar_body .bar_top .total2 {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -579,7 +583,7 @@
   border-bottom: 1px solid rgba(150, 150, 150, 0.3);
   padding-bottom: 20px;
 }
-.books_wrap .books_bar .bar_body .bar_top .price span:last-child {
+.books_wrap .books_bar .bar_body .bar_top .total2 span:last-child {
   font-size: 20px;
 }
 .books_wrap .books_bar .bar_body .bar_top .buy {
@@ -675,6 +679,7 @@
 .books .review {
   width: 1140px;
   margin: 0 auto;
+  padding-bottom: 100px;
 }
 .books .review_hd {
   width: 750px;
@@ -700,4 +705,84 @@
   border-top: 1px solid rgba(150, 150, 150, 0.3);
   border-bottom: 1px solid rgba(150, 150, 150, 0.3);
   font-size: 20px;
+}
+.books .review_list {
+  width: 750px;
+}
+.books .review_list .review_o {
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(150, 150, 150, 0.3);
+}
+.books .review_list .review_o ul {
+  display: flex;
+  font-size: 12px;
+}
+.books .review_list .review_o ul li {
+  margin: 10px 10px 10px 0;
+}
+.books .review_list .review_o ul li:nth-child(even) {
+  color: rgba(100, 100, 100, 0.5);
+}
+.books .review_list .review_o p > img {
+  width: 130px;
+  height: 130px;
+  margin: 20px 0;
+}
+.books .review_list .review_o span {
+  display: block;
+  margin-top: 30px;
+}
+.books .review_list .review_o div {
+  text-align: right;
+}
+.books .review_list .review_o a {
+  display: inline-block;
+  padding: 0 15px;
+  border-radius: 20px;
+  margin: 20px 0;
+  font-size: 14px;
+  border: 1px solid rgba(150, 150, 150, 0.3);
+}
+.books .review_list .review_o a span {
+  display: inline-block;
+  margin: 0 5px 0 0;
+}
+.books .review_list .review_o a * {
+  margin-right: 5px;
+}
+
+.sns ul {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 66px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+.sns ul li {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s;
+}
+.sns ul li.on {
+  width: 66px;
+}
+.sns ul li.fb {
+  background-color: #039be5;
+}
+.sns ul li.ln {
+  background-color: #00c300;
+}
+.sns ul li.kk {
+  background-color: #263238;
+}
+.sns ul li.pt {
+  background-color: #E60023;
+}
+.sns ul li.tw {
+  background-color: #03a9f4;
 }
